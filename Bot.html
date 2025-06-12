@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <title>Technoi Bot</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Tahoma, sans-serif;
+      direction: rtl;
+      background-color: #e0e0e0;
+      margin: 0;
+      padding: 40px 10px;
+      display: flex;
+      justify-content: center;
+      color: #2a2a2a;
+    }
+    .main-card {
+      background: #e8e8e8;
+      border-radius: 20px;
+      padding: 40px 30px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      max-width: 600px;
+      width: 100%;
+      text-align: center;
+      border: 1px solid #ccc;
+    }
+    .logo-wrapper {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 15px;
+    }
+    .logo-wrapper img {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 3px solid #ccc;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+    .title-box {
+      background-color: #e0f2f1;
+      padding: 12px 20px;
+      border-radius: 12px;
+      font-size: 18px;
+      font-weight: bold;
+      color: #004d40;
+      display: inline-block;
+      margin-bottom: 20px;
+    }
+    .features-box {
+      background-color: #e0f2f1;
+      border: 1px solid #b2dfdb;
+      border-radius: 12px;
+      padding: 20px;
+      text-align: right;
+      font-size: 15.8px;
+      line-height: 2;
+      margin-bottom: 20px;
+    }
+    .button-container {
+      background-color: #e0f2f1;
+      border: 1px solid #b2dfdb;
+      border-radius: 12px;
+      padding: 20px;
+      margin-top: 0;
+      width: 100%;
+    }
+    .buy-button {
+      display: block;
+      width: 100%;
+      padding: 12px 24px;
+      margin: 10px 0;
+      font-size: 16px;
+      background-color: #00695c;
+      color: white;
+      text-decoration: none;
+      border-radius: 10px;
+      text-align: center;
+      transition: background-color 0.3s ease, transform 0.2s;
+    }
+    .buy-button:hover {
+      background-color: #004d40;
+      transform: scale(1.02);
+    }
+    #locations {
+      display: none;
+      font-size: 15.8px;
+      text-align: right;
+      margin-top: 15px;
+      background-color: #ffffff;
+      padding: 15px 20px;
+      border-radius: 12px;
+      border: 1px solid #b2dfdb;
+      line-height: 2;
+      word-wrap: break-word;
+    }
+    .text-links {
+      margin-top: 30px;
+      font-size: 15.5px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      align-items: center;
+    }
+    .text-links a {
+      color: #00695c;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 16px;
+      transition: color 0.2s;
+    }
+    .text-links a i {
+      width: 32px;
+      height: 32px;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      background-color: #b2dfdb;
+      font-size: 18px;
+    }
+    .text-links a .fa-whatsapp { color: #25D366; }
+    .text-links a .fa-telegram { color: #0088cc; }
+    .text-links a:hover { color: #004d40; }
+  </style>
+</head>
+<body>
+  <div class="main-card">
+    <div class="logo-wrapper">
+      <img src="https://github.com/TheTechnoi/Technoi/blob/main/Bot.jpg?raw=true" alt="لوگو گرد">
+    </div>
+    <div class="title-box">ربات فروش VPN کانال Technoi</div>
+
+    <!-- ویژگی‌ها در کادر جدا -->
+    <div class="features-box">
+      • مناسب استفاده از برنامه‌های Telegram, Instagram , YouTube , ...<br>
+      • قابل استفاده در Android , IOS , Windows<br>
+      • شبکه پرسرعت و امن<br>
+      • سازگاری با تمامی اپراتورها ( همراه اول ، ایرانسل ، رایتل ، مخابرات ، شاتل و ... )<br>
+      • آیپی ثابت<br>
+      • بازگشت وجه درصورت عدم رضایت<br>
+      • پشتیبانی تا آخرین روز اشتراک<br>
+      • تحویل آنی سرویس پس از پرداخت<br>
+      • پخش ویدیوهای یوتوب بدون تبلیغات با سرور آلبانی
+    </div>
+
+    <!-- دکمه‌ها پایین‌تر از کادر ویژگی -->
+    <div class="button-container">
+      <a href="#" class="buy-button" onclick="toggleLocations()">لیست لوکیشن‌ها</a>
+      <div id="locations">
+        🇦🇨 امارات (Emirate)<br>
+        🇨🇭 سوئیس (Switzerland)<br>
+        🇩🇰 دانمارک (Denmark)<br>
+        🇩🇪 آلمان (Germany)<br>
+        🇪🇸 اسپانیا (Spain)<br>
+        🇫🇮 فنلاند (Finland)<br>
+        🇫🇷 فرانسه (France)<br>
+        🇮🇹 ایتالیا (Italy)<br>
+        🇯🇵 ژاپن (Japan)<br>
+        🇳🇱 هلند (Netherlands)<br>
+        🇸🇪 سوئد (Sweden)<br>
+        🇹🇷 ترکیه (Turkey)<br>
+        🇺🇦 اکراین (Ukraine)<br>
+        🇬🇧 انگلیس (England)<br>
+        🇺🇸 آمریکا (USA)<br>
+        🇦🇱 آلبانی (Albania)
+      </div>
+      <a href="https://t.me/technoi_bot" class="buy-button" target="_blank">خرید اشتراک VPN</a>
+    </div>
+
+    <div class="text-links">
+      <a href="https://wa.me/447411329271" target="_blank">WhatsApp <i class="fab fa-whatsapp"></i></a>
+      <a href="https://t.me/TheTechnoi" target="_blank">Technoi Market <i class="fab fa-telegram"></i></a>
+    </div>
+  </div>
+
+  <script>
+    function toggleLocations() {
+      const list = document.getElementById("locations");
+      list.style.display = (list.style.display === "none" || list.style.display === "") ? "block" : "none";
+    }
+  </script>
+</body>
+</html>
